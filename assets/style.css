@@ -20,6 +20,12 @@
     width: auto;
 }
 
+.card-img-overlay {
+    width: auto;
+    height: auto;
+
+}
+
 .card-text {
     text-align: center;
     font-size: 15px;
