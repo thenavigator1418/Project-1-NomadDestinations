@@ -52,7 +52,6 @@ var bnbData = "";
     console.log(cityName); 
     var weatherId = cityName.replace(" ", "") + "Weather"; // Buenos Aires = BuenosAires
     var weatherLi = $(`#${weatherId}`);
-
     var cityImgId = cityName.replace(' ', '') + 'Img';
     var cityImg = $(`#${cityImgId}`);
     bnbApi(cityName, cityImg); // runs bnbApi func with cityName passed into template literal API search
