@@ -1,6 +1,6 @@
 // visualcrossing weather api call
 // queries API, console logs a five day forecast from current day
-function weatherApi(city) {
+function weatherApi(city, weatherLi) {
     var queryURL = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}?unitGroup=metric&key=8N7VE7DU57F4PZWVAGHNN5ZVK&contentType=json`;
     var weatherData = "";
     fetch(queryURL)
@@ -13,13 +13,17 @@ function weatherApi(city) {
         console.log(data.days[2].temp);
         console.log(data.days[3].temp);
         console.log(data.days[4].temp); // creates a five day forecast
+        weatherLi.empty();
+        for (let index = 0; index < 5; index++) {
+            weatherLi.append($(`<li class='d-inline'>${data.days[index].temp}</li>`));
+        }
         weatherData = data;
       });
   }
   
-/*   var bnbData = "";
+var bnbData = "";
   
-  function bnbApi(city) { 
+  function bnbApi(city, cityImg) { 
     const bnbUrl = `https://airbnb13.p.rapidapi.com/search-location?location=${city}&checkin=2024-06-01&checkout=2024-06-10&adults=1&children=0&infants=0&pets=0&page=1&currency=GBP`;
     const bnbOptions = {
       method: "GET",
@@ -35,9 +39,10 @@ function weatherApi(city) {
       .then(function (data) {
         console.log(data.results[0].images[0]); // log the first image from the first result for an airbnb listing on city search. This will be appended to a card element later on
         bnbData = data;
+        cityImg.attr("src", data.results[0].images[0]);
 
       });
-  }   */
+  } 
 
   var cardsDiv = document.getElementById("cards"); // cardsDiv = all bootstrap cards on the page
 
@@ -45,12 +50,14 @@ function weatherApi(city) {
     var trimmedLocations = event.target.textContent.trim(); // trims the text content in card, which is the city name
     var cityName = trimmedLocations.split(",", 2)[0]; // cityName is the trimmedLocations split at the ",", split into two elements, of which we select the first
     console.log(cityName); 
-    /* bnbApi(cityName); */ // runs bnbApi func with cityName passed into template literal API search
-    weatherApi(cityName); // runs weatherApi func with cityName passed into template literal API search
-    /* $("#fiveDayForecast").append(<li>Test</li>); */
+    var weatherId = cityName.replace(" ", "") + "Weather"; // Buenos Aires = BuenosAires
+    var weatherLi = $(`#${weatherId}`);
 
-
-  });
+    var cityImgId = cityName.replace(' ', '') + 'Img';
+    var cityImg = $(`#${cityImgId}`);
+    bnbApi(cityName, cityImg); // runs bnbApi func with cityName passed into template literal API search
+    weatherApi(cityName, weatherLi); // runs weatherApi func with cityName passed into template literal API search
+});
 
 
 
