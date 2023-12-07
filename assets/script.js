@@ -21,7 +21,7 @@ function weatherApi(city, weatherLi) {
     });
 }
 
-/* var bnbData = "";
+var bnbData = "";
   
   function bnbApi(city, cityImg) { 
     const bnbUrl = `https://airbnb13.p.rapidapi.com/search-location?location=${city}&checkin=2024-06-01&checkout=2024-06-10&adults=1&children=0&infants=0&pets=0&page=1&currency=GBP`;
@@ -42,9 +42,9 @@ function weatherApi(city, weatherLi) {
         cityImg.attr("src", data.results[0].images[0]);
 
       });
-  }  */
+  } 
 
-/* var cardsDiv = document.getElementById("cards"); // cardsDiv = all bootstrap cards on the page
+ var cardsDiv = document.getElementById("cards"); // cardsDiv = all bootstrap cards on the page
 
   cardsDiv.addEventListener("click", function (event) { // addEventListener for a click
     var trimmedLocations = event.target.textContent.trim(); // trims the text content in card, which is the city name
@@ -57,6 +57,3 @@ function weatherApi(city, weatherLi) {
     bnbApi(cityName, cityImg); // runs bnbApi func with cityName passed into template literal API search
     weatherApi(cityName, weatherLi); // runs weatherApi func with cityName passed into template literal API search
 });
-
-
-
