@@ -46,18 +46,17 @@ function weatherApi(city, weatherLi) {
 
 /* var cardsDiv = document.getElementById("cards"); // cardsDiv = all bootstrap cards on the page
 
-cardsDiv.addEventListener("click", function (event) { // addEventListener for a click
-  var trimmedLocations = event.target.textContent.trim(); // trims the text content in card, which is the city name
-  var cityName = trimmedLocations.split(",", 2)[0]; // cityName is the trimmedLocations split at the ",", split into two elements, of which we select the first
-  console.log(cityName); 
-  var weatherId = cityName.replace(" ", "") + "Weather"; // Buenos Aires = BuenosAires
-  var weatherLi = $(`#${weatherId}`);
-
-  var cityImgId = cityName.replace(' ', '') + 'Img';
-  var cityImg = $(`#${cityImgId}`);
-  bnbApi(cityName, cityImg); // runs bnbApi func with cityName passed into template literal API search
-  weatherApi(cityName, weatherLi); // runs weatherApi func with cityName passed into template literal API search
-}); */
+  cardsDiv.addEventListener("click", function (event) { // addEventListener for a click
+    var trimmedLocations = event.target.textContent.trim(); // trims the text content in card, which is the city name
+    var cityName = trimmedLocations.split(",", 2)[0]; // cityName is the trimmedLocations split at the ",", split into two elements, of which we select the first
+    console.log(cityName); 
+    var weatherId = cityName.replace(" ", "") + "Weather"; // Buenos Aires = BuenosAires
+    var weatherLi = $(`#${weatherId}`);
+    var cityImgId = cityName.replace(' ', '') + 'Img';
+    var cityImg = $(`#${cityImgId}`);
+    bnbApi(cityName, cityImg); // runs bnbApi func with cityName passed into template literal API search
+    weatherApi(cityName, weatherLi); // runs weatherApi func with cityName passed into template literal API search
+});
 
 
 
