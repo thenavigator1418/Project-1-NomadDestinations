@@ -85,6 +85,12 @@ p {
     width: auto;
 }
 
+.card-img-overlay {
+    width: 100%;
+    height: 100%;
+
+}
+
 .card-text {
     text-align: center;
     font-size: 15px;
