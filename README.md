@@ -8,7 +8,7 @@ A group project to create an app that pulls through AirBnB listings to a webpage
 
 Either download the repositary and use locally or use the github pages link
 
-[github pages link](#)
+[github pages link](https://thenavigator1418.github.io/Project-1-NomadDestinations/)
 
 ## Usage
 
@@ -16,10 +16,13 @@ Our website uses simple bootstrap elements and cards to hide and reveal data, it
 
 Here we have the home page with the cards the user can click on to reveal data about our locations
 ![image1](assets/Images/nomaddestinations1.png)
+
 This is what the cards look like when deployed
 ![image2](assets/Images/nomaddestinations2.png)
+
 This is what a city's page looks like
 ![image3](assets/Images/nomaddestinations3.png)
+
 
 ## Credits
 
