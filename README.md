@@ -15,11 +15,11 @@ Either download the repositary and use locally or use the github pages link
 Our website uses simple bootstrap elements and cards to hide and reveal data, it also features a nav bar at the top of every page which has a drop down to show the various pages.
 
 Here we have the home page with the cards the user can click on to reveal data about our locations
-![image1](assets/Images/nomaddestinations1.png]
+![image1](assets/Images/nomaddestinations1.png)
 This is what the cards look like when deployed
-![image2](assets/Images/nomaddestinations2.png]
+![image2](assets/Images/nomaddestinations2.png)
 This is what a city's page looks like
-![image3](assets/Images/nomaddestinations3.png]
+![image3](assets/Images/nomaddestinations3.png)
 
 ## Credits
 
